@@ -1,7 +1,6 @@
 # Pruebas automáticas — MeteoAula
 
 Este archivo registra los resultados **reales** producidos por el proyecto `Pruebas`.
-No reemplaza las pruebas manuales ni las capturas de `LOGBOOK.md`.
 
 **Ejecución:** desde la carpeta de la solución, utilizar `dotnet run --project Pruebas`,
 o establecer `Pruebas` como proyecto de inicio en Visual Studio y presionar `Ctrl + F5`.
@@ -13,7 +12,7 @@ como **FALLIDO** y las pruebas no ejecutadas no se consideran aprobadas.
 
 ## Registro de ejecuciones
 
-### Ejecución: 2026-11-23 09:49:35 -05:00
+### Ejecución:
 
 Origen: proyecto `Pruebas` (.NET 8, ejecución automática).
 

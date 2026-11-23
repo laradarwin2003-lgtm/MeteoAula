@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ServidorTCP": {
+      "commandName": "Project",
+      "commandLineArgs": "5050 0.0.0.0\r\n"
+    }
+  }
+}

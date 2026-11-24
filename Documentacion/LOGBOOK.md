@@ -7,13 +7,12 @@
 
 | Campo | Información |
 |---|---|
-| Integrantes | — |
-| Grupo | — |
+| Integrantes | Darwin Lara, Anahi Rojas|
+| Grupo | GR1B_06 |
 | Tecnología | C# / .NET 8 / sockets TCP |
 | Protocolo | METEO/1.0 |
 | Documentos relacionados | [BACKLOG.md](BACKLOG.md), [Pruebas.md](Pruebas.md), [README.md](../README.md) |
 
-> **Nota de registro:** las siete sesiones siguientes son una reconstrucción retrospectiva propuesta a partir del trabajo desarrollado en MeteoAula. Las fechas, horarios y participantes deben completarse con los datos reales. Las imágenes se incorporarán en `Documentacion/Evidencias/`.
 
 ## 1. Objetivos y alcance
 
@@ -33,9 +32,9 @@
 | Campo | Registro |
 |---|---|
 | Reunión | 1 |
-| Fecha | — |
-| Horario de trabajo | — |
-| Participantes | — |
+| Fecha | 12/11/2026 |
+| Horario de trabajo | 11:00 - 14:00 |
+| Participantes | Todos los integrantes|
 
 **Actividades realizadas**
 
@@ -44,17 +43,17 @@ Se analizaron los requisitos del observatorio remoto y se definió su alcance: c
 **Resultado:** Arquitectura acordada y alcance delimitado antes de integrar la comunicación.
 
 **Evidencias**
-
-- **Imagen 1.** Explorador de soluciones con ServidorTCP, ClienteTCP y las carpetas de la arquitectura.
+(Revisar en evidencias)
+- **Imagen 1.** Explorador de soluciones con ServidorTCP, ClienteTCP y las carpetas de la arquitectura .
 
 ### Sesión 2. Catálogo meteorológico, modelos y consultas
 
 | Campo | Registro |
 |---|---|
 | Reunión | 2 |
-| Fecha | — |
-| Horario de trabajo | — |
-| Participantes | — |
+| Fecha | 14/11/2026 |
+| Horario de trabajo | 16:00 - 18:00 |
+| Participantes | Todos los participantes |
 
 **Actividades realizadas**
 
@@ -63,7 +62,7 @@ Se implementaron los modelos `Ciudad`, `EstadoTiempo`, `Lectura`, `Estacion` y `
 **Resultado:** Catálogo y lógica de consultas disponibles para su uso por el intérprete del protocolo.
 
 **Evidencias**
-
+(Revisar en evidencias)
 - **Imagen 2.** Clase RepositorioLecturas mostrando las estaciones y algunas lecturas precargadas.
 - **Imagen 3.** Clase ServicioConsultas y sus métodos de consulta y resumen.
 
@@ -72,9 +71,9 @@ Se implementaron los modelos `Ciudad`, `EstadoTiempo`, `Lectura`, `Estacion` y `
 | Campo | Registro |
 |---|---|
 | Reunión | 3 |
-| Fecha | — |
-| Horario de trabajo | — |
-| Participantes | — |
+| Fecha | 15/11/2026 |
+| Horario de trabajo | 16:00 - 18:00 |
+| Participantes | Todos los participantes |
 
 **Actividades realizadas**
 
@@ -83,7 +82,7 @@ Se diseñó el protocolo METEO/1.0 sobre TCP, estableciendo mensajes UTF-8 sin B
 **Resultado:** Contrato del protocolo METEO/1.0 y su intérprete integrados con la lógica de consultas.
 
 **Evidencias**
-
+(Revisar en evidencias)
 - **Imagen 4.** Código de InterpreteProtocolo mostrando comandos, validaciones o estados.
 - **Imagen 5.** Consola con LIST rechazado antes de HELLO (428) y LIST aceptado después.
 
@@ -92,9 +91,9 @@ Se diseñó el protocolo METEO/1.0 sobre TCP, estableciendo mensajes UTF-8 sin B
 | Campo | Registro |
 |---|---|
 | Reunión | 4 |
-| Fecha | — |
-| Horario de trabajo | — |
-| Participantes | — |
+| Fecha | 19/11/2026 |
+| Horario de trabajo | 11:00 - !3:00 |
+| Participantes | todos los participantes |
 
 **Actividades realizadas**
 
@@ -103,7 +102,7 @@ Se implementó `ServidorTCP` mediante `TcpListener` y `TcpClient`, permitiendo r
 **Resultado:** Servidor capaz de procesar solicitudes completas y permanecer disponible después de errores controlados.
 
 **Evidencias**
-
+(Revisar en evidencias)
 - **Imagen 6.** Consola de ServidorTCP escuchando en 0.0.0.0:5050 y registrando operaciones.
 - **Imagen 7.** Prueba de PowerShell con mensajes fragmentados o agrupados.
 
@@ -112,9 +111,9 @@ Se implementó `ServidorTCP` mediante `TcpListener` y `TcpClient`, permitiendo r
 | Campo | Registro |
 |---|---|
 | Reunión | 5 |
-| Fecha | — |
-| Horario de trabajo | — |
-| Participantes | — |
+| Fecha | 19/11/2026 |
+| Horario de trabajo | 14:00 - 16:00 |
+| Participantes | Todos los participantes |
 
 **Actividades realizadas**
 
@@ -123,18 +122,17 @@ Se desarrolló `ClienteTCP` como aplicación de consola con los comandos locales
 **Resultado:** Cliente funcional para consultar estaciones meteorológicas y administrar manualmente la conexión.
 
 **Evidencias**
-
-- **Imagen 8.** Consola ClienteTCP con configuración de IP/puerto, CONNECT y HELLO.
-- **Imagen 9.** Consola ClienteTCP con LIST, CURRENT, HISTORY y SUMMARY y sus resultados.
+(Revisar en evidencias)
+- **Imagen 8.** Consola ClienteTCP con configuración de IP/puerto, CONNECT y HELLO. Consola ClienteTCP con LIST, CURRENT, HISTORY y SUMMARY y sus resultados.
 
 ### Sesión 6. Validación funcional, errores, límites y pruebas automáticas
 
 | Campo | Registro |
 |---|---|
 | Reunión | 6 |
-| Fecha | — |
-| Horario de trabajo | — |
-| Participantes | — |
+| Fecha | 21/11/2025 |
+| Horario de trabajo | 14:00 - 16:00 |
+| Participantes | Todos los participantes |
 
 **Actividades realizadas**
 
@@ -143,19 +141,18 @@ Se organizaron los casos CP-01 a CP-16 para comprobar comandos válidos e invál
 **Resultado:** Pruebas funcionales organizadas y sistema de registro automático incorporado, pendiente de verificar en su ejecución definitiva.
 
 **Evidencias**
-
-- **Imagen 10.** Consola mostrando los códigos de error 400, 401, 402, 404, 409, 416 o 505.
-- **Imagen 11.** Prueba de COUNT incompleto y END prematuro.
-- **Imagen 12.** Prueba del límite de 512 y 513 bytes.
-- **Imagen 13.** Proyecto Pruebas en Visual Studio y archivo Pruebas.md después de una ejecución real.
-
+(Revisar en evidencias)
+- **Imagen 9.** Consola mostrando los códigos de error 400, 401, 402, 404, 409, 416 o 505.
+- **Imagen 10.** Prueba de COUNT incompleto y END prematuro.
+- **Imagen 11.** Proyecto Pruebas en Visual Studio y archivo Pruebas.md después de una ejecución real.
+(Revisar en evidencias)
 ### Sesión 7. Integración en LAN, solución de incidencias y documentación
 
 | Campo | Registro |
 |---|---|
 | Reunión | 7 |
-| Fecha | — |
-| Horario de trabajo | — |
+| Fecha | 21/11/2026 |
+| Horario de trabajo | 17:00 - 20:00 |
 | Participantes | — |
 
 **Actividades realizadas**
@@ -166,10 +163,10 @@ Se configuró el servidor para escuchar en `0.0.0.0:5050` y se habilitó una reg
 
 **Evidencias**
 
-- **Imagen 14.** Regla de entrada del firewall para el puerto TCP 5050.
-- **Imagen 15.** Cliente remoto conectado al servidor y realizando consultas.
-- **Imagen 16.** Servidor registrando la conexión desde la IP de la segunda computadora.
-- **Imagen 17.** Consola con QUIT, RECONNECT, error 428 y nuevo HELLO.
+- **Imagen 12.** Regla de entrada del firewall para el puerto TCP 5050.
+- **Imagen 13.** Cliente remoto conectado al servidor y realizando consultas.
+- **Imagen 14.** Servidor registrando la conexión desde la IP de la segunda computadora y consulta
+
 
 ---
 
@@ -192,11 +189,11 @@ Cada línea se interpreta una vez recibido LF, incluso si TCP entrega una parte 
 | Solicitud | Respuesta o efecto |
 |---|---|
 | <code>HELLO&#124;1.0</code> | <code>200&#124;WELCOME&#124;1.0</code> |
-| `HELP` | Ayuda 200 con versión, límite y comandos disponibles. |
+| `HELP` | 200 |
 | `LIST` | <code>210&#124;COUNT&#124;5</code>, cinco registros <code>211&#124;STATION...</code> y <code>212&#124;END</code>. |
-| <code>CURRENT&#124;EST001</code> | <code>200&#124;CURRENT...</code> con fecha/hora, temperatura, humedad y estado. |
+| <code>CURRENT&#124;EST001</code> | Consulta de la lectura actual de la estacion |
 | <code>HISTORY&#124;EST003&#124;2</code> | <code>210&#124;COUNT&#124;2</code>, dos registros <code>211&#124;READING...</code> y <code>212&#124;END</code>. |
-| <code>SUMMARY&#124;EST001</code> | <code>200&#124;SUMMARY...</code> con total, promedio, mínimo y máximo. |
+| <code>SUMMARY&#124;EST001</code> | Historial solicitado mediante conteo, reguistros y fin de bloque|
 | `QUIT` | <code>200&#124;BYE</code> y cierre de sesión. |
 
 En HISTORY, N puede ser cualquier entero entre 1 y la cantidad de lecturas disponibles de la estación; no se establece un máximo global arbitrario. LIST y HISTORY concluyen después de recibir el número anunciado de registros y `212|END`.
@@ -226,23 +223,25 @@ Antes de `HELLO` solamente se permiten `HELLO`, `HELP` y `QUIT`. Una consulta pr
 
 Las respuestas de error siguen `CODIGO|ERROR|MOTIVO`. Los errores de trama pueden cerrar únicamente la conexión afectada. El servidor permanece disponible para nuevos clientes.
 
+---
+
 ### 3.5 Ejemplos de intercambio
 
-**Caso correcto:**
+**Caso exitoso:**
 
 ```text
 C → S: HELLO|1.0
 S → C: 200|WELCOME|1.0
-C → S: HISTORY|EST003|2
-S → C: 210|COUNT|2
-S → C: 211|READING|2026-10-05T08:00:00|11.6|81|Nublado
-S → C: 211|READING|2026-10-05T15:00:00|17.8|63|ParcialmenteNublado
+C → S: LIST
+S → C: 210|COUNT|5
+S → C: 211|STATION|EST001|Quito Centro|UIO
+S → C: ... (4 registros STATION adicionales)
 S → C: 212|END
 C → S: QUIT
 S → C: 200|BYE
 ```
 
-**Caso de error de estado:**
+**Caso de error:**
 
 ```text
 C → S: LIST
@@ -251,43 +250,84 @@ C → S: HELLO|1.0
 S → C: 200|WELCOME|1.0
 ```
 
-El contrato completo del protocolo está documentado en [BACKLOG.md](BACKLOG.md).
+Los ejemplos abreviados representan la secuencia lógica; cada línea transmitida termina con LF. Los registros `...` son solo una abreviación documental, no un mensaje real del protocolo.
 
 ---
 
-## 4. Registro resumido de pruebas manuales y evidencias
+## 4. Plan de pruebas
 
-La siguiente tabla relaciona los casos de prueba con las sesiones y sus evidencias. Los resultados de las pruebas automáticas se encuentran en `Pruebas.md`.
+Se identificaron casos positivos, negativos, de límite, robustez e integración. Un caso se considera **aprobado** cuando el resultado observado coincide con el esperado; si cambia el contrato, debe repetirse la prueba afectada.
 
-| Caso | Verificación | Situación según antecedentes | Evidencia |
+| ID | Tipo | Caso | Esperado |
 |---|---|---|---|
-| CP-01 | HELLO, HELP y LIST | Indicada en la secuencia de comprobación | Imagen 5 y 9 |
-| CP-02 | CURRENT, HISTORY y SUMMARY | Indicada en la secuencia de comprobación | Imagen 9 |
-| CP-03 | LIST antes de HELLO: error 428 | Verificada en pruebas previas | Imagen 5 |
-| CP-04 | Estación inexistente: error 404 | Verificada en pruebas previas | Imagen 10 |
-| CP-05 | Comando desconocido, parámetro faltante y formato inválido: 400/401/402 | Verificada en pruebas previas | Imagen 10 |
-| CP-06 | HELLO repetido y versión incompatible: 409/505 | Verificada en pruebas previas | Imagen 10 |
-| CP-07 | HISTORY fuera de rango: 416 | Verificada en pruebas previas | Imagen 10 |
-| CP-08 | HISTORY EST002 20 y respuesta COUNT + END | Verificada en pruebas previas | Imagen 9 |
-| CP-09 | Comandos TCP fragmentados | Verificada en pruebas previas | Imagen 7 |
-| CP-10 | Mensajes agrupados en una escritura TCP | Verificada en pruebas previas | Imagen 7 |
-| CP-11 | COUNT incompleto y END prematuro | Referida en pruebas previas | Imagen 11 |
-| CP-12 | Desconexión abrupta | Referida en pruebas previas | Imagen 6 |
-| CP-13 | Ctrl+C, liberación del puerto y reinicio | Referida en pruebas previas | Imagen 6 |
-| CP-14 | Comunicación entre dos computadoras | Confirmada en la integración LAN | Imagen 15 y 16 |
-| CP-15 | Límite de 512 y 513 bytes | Pendiente de confirmar con resultado de la versión actual | Imagen 12 |
-| CP-16 | QUIT, RECONNECT y nuevo HELLO | Por corroborar en la evidencia final | Imagen 17 |
-
-**Pruebas automáticas:** las ejecuciones del proyecto `Pruebas` se registran en [Pruebas.md](Pruebas.md), sin duplicar los resultados en este documento.
+| CP-01 | Positiva | HELLO, HELP y LIST | Bienvenida, ayuda y cinco estaciones. |
+| CP-02 | Positiva | CURRENT, HISTORY, SUMMARY | Lecturas y estadísticas coherentes con el repositorio. |
+| CP-03 | Negativa | LIST antes de HELLO | 428 HELLO_REQUERIDO. |
+| CP-04 | Negativa | Estación inexistente | 404 ESTACION_INEXISTENTE. |
+| CP-05 | Negativa | Comando desconocido / parámetro faltante / formato inválido | 400 / 401 / 402. |
+| CP-06 | Negativa | HELLO repetido y versión incompatible | 409 / 505. |
+| CP-07 | Límite | HISTORY con N fuera del total disponible | 416 y sesión recuperable. |
+| CP-08 | Positiva/límite | HISTORY EST002 20 y EST003 2 | COUNT 20 / 2, datos y END. |
+| CP-09 | Protocolo | Mensajes enviados fragmentados | Reensamblaje hasta LF. |
+| CP-10 | Protocolo | Varios mensajes en una misma escritura TCP | Una respuesta por solicitud. |
+| CP-11 | Validación cliente | COUNT 2, solo un registro y END | Rechazo de respuesta inconsistente. |
+| CP-12 | Robustez | Desconexión abrupta y nueva conexión | El servidor continúa disponible. |
+| CP-13 | Robustez | Ctrl+C, reinicio y conexión fallida cuando está apagado | Cierre limpio y reinicio funcional. |
+| CP-14 | Integración | Cliente y servidor en dos equipos | Consultas exitosas por LAN. |
+| CP-15 | Límite | Tramas de 512 y 513 bytes, incluido LF | 512 aceptada como longitud; 513 → error 413. |
+| CP-16 | Integración | QUIT y RECONNECT | Despedida y nuevo HELLO obligatorio. |
 
 ---
 
-## 5. Cierre y conclusiones
+## 5. Registro de ejecución de pruebas
 
-- La separación de Datos, Servicios, Protocolo y Red permite mantener la lógica meteorológica independiente de la transmisión mediante sockets TCP.
-- La máquina de estados, los códigos de error y las respuestas COUNT + END proporcionan un intercambio verificable y evitan interpretar mensajes incompletos como resultados válidos.
-- La comunicación entre dos computadoras evidenció la importancia de configurar correctamente las direcciones IP, el puerto de escucha y el firewall sin desactivar la protección del sistema.
-- El registro por sesiones complementa el contrato del Backlog, las instrucciones del README y el historial de pruebas automáticas.
+### 5.1 Pruebas manuales
 
-**Por completar:** fechas, horarios, participantes, capturas de Imagen 1 a Imagen 17 y comprobación final de los casos CP-15 y CP-16.
+| Caso | Resultado observado | Estado histórico | Imagen de referencia en EVIDENCIAS |
+|---|---|---|---|
+| CP-01 | HELLO devolvió `200|WELCOME|1.0`. | APROBADO | CASO DE PRUEBA 1 |
+| CP-02 | CURRENT EST001: 13.7 °C, 73 %; HISTORY EST003: 2 lecturas; SUMMARY EST001: media 16.31, mín. 12.4, máx. 21.1 °C. | APROBADO | CASO DE PRUEBA 2 |
+| CP-03 | LIST antes de HELLO devolvió 428. | APROBADO | CASO DE PRUEBA 3 |
+| CP-04 | `CURRENT|EST999` devolvió 404. | APROBADO | CASO DE PRUEBA 4 |
+| CP-05 | Comando no reconocido: 400; falta de parámetro: 401; cantidad no entera: 402. | APROBADO | CASO DE PRUEBA 5 |
+| CP-06 | HELLO repetido: 409; `HELLO|2.0`: 505. | APROBADO | CASO DE PRUEBA 6 |
+| CP-07 | `HISTORY|EST003|15` devolvió 416 por cantidad fuera de rango. | APROBADO | CASO DE PRUEBA 7 |
+| CP-08 | `HISTORY|EST002|20` devolvió COUNT 20, registros y END. | APROBADO | CASO DE PRUEBA 8 |
+| CP-09 | HELLO y CURRENT fragmentados en tres escrituras TCP; las respuestas fueron correctas. | APROBADO | CASO DE PRUEBA 9 |
+| CP-10 | Cuatro solicitudes en una sola escritura TCP fueron procesadas con cuatro respuestas. | APROBADO | CASO DE PRUEBA 10 |
+| CP-11 | El cliente detectó COUNT incompleto y cerró la conexión afectada. | APROBADO | CASO DE PRUEBA 11 |
+| CP-12 | Tras simular desconexión TCP abrupta, se aceptó otra conexión. | APROBADO | CASO DE PRUEBA 12 |
+| CP-13 | Cierre mediante Ctrl+C, reinicio y manejo del cliente con servidor apagado: correctos. | APROBADO | CASO DE PRUEBA 13.1 CIERRE DEL SERVIDOR; CASO DE PRUEBA 13.2 REINICIO DEL SERVIDOR |
+| CP-14 | El equipo confirmó HELLO, LIST, CURRENT, HISTORY, SUMMARY y QUIT entre dos computadoras. | APROBADO | CASO DE PRUEBA 14.1 SERVIDOR COMPUTADORA 1; CASO DE PRUEBA 14.2 CLIENTE COMPUTADORA 2 |
+| CP-15 | Conexión entre dos computadoras y funcionamiento. | APROBADO | CASO DE PRUEBA 15 |
+| CP-16 | QUIT cerró la sesión; RECONNECT exigió HELLO nuevamente. | APROBADO | CASO DE PRUEBA 16 |
 
+### 5.2 Pruebas automáticas
+
+Las ejecuciones automáticas se registran por separado en [Pruebas.md](Pruebas.md).
+
+Este Logbook conserva el plan de pruebas manuales, sus resultados y las referencias a evidencias.
+
+---
+
+## 6. Evidencias y referencias de imágenes
+
+Las imágenes se guardan en `Documentacion/Evidencias/`. En cada caso se identifica el **nombre exacto** de su imagen asociada.
+
+---
+
+## 7. Incidencias y soluciones
+
+| Incidencia | Ajuste aplicado | Verificación |
+|---|---|---|
+| Desconexión durante pausas de uso. | Timeouts de lectura/escritura ampliados a **300 000 ms** en ambos extremos. | Operación posterior correcta reportada. |
+| Segunda computadora sin acceso al servidor. | Listener en `0.0.0.0:5050` y regla de entrada TCP 5050 en el firewall, sin desactivarlo. | Conexión y consultas entre equipos confirmadas. |
+| Necesidad de acotar mensajes de aplicación. | Nuevo máximo de 512 bytes por línea en cliente y servidor. | Operación correcta. |
+
+---
+
+## 8. Conclusiones
+
+- La solución satisface la arquitectura de cliente-servidor con sockets TCP y un protocolo propio. Las pruebas históricas respaldan las operaciones, los estados y la robustez de la implementación previa.
+- Las pruebas funcionales permitieron verificar que MeteoAula procesa correctamente las consultas meteorológicas, valida los parámetros recibidos y devuelve códigos de respuesta específicos ante solicitudes incorrectas. Además, se comprobó que los errores controlados no interrumpen innecesariamente la sesión, lo que contribuye a la estabilidad y confiabilidad del sistema.
+- La comunicación entre dos computadoras de una misma red local permitió comprobar el funcionamiento distribuido de MeteoAula mediante sockets TCP. Asimismo, las pruebas de fragmentación, agrupación de mensajes, desconexión y reconexión demostraron la capacidad del sistema para gestionar diferentes situaciones de comunicación, manteniendo la integridad de las solicitudes y respuestas.

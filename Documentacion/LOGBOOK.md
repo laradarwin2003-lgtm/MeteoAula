@@ -153,7 +153,7 @@ Se organizaron los casos CP-01 a CP-16 para comprobar comandos válidos e invál
 | Reunión | 7 |
 | Fecha | 21/11/2026 |
 | Horario de trabajo | 17:00 - 20:00 |
-| Participantes | — |
+| Participantes | Todos los participantes|
 
 **Actividades realizadas**
 
@@ -162,7 +162,7 @@ Se configuró el servidor para escuchar en `0.0.0.0:5050` y se habilitó una reg
 **Resultado:** Comunicación cliente-servidor entre dos computadoras confirmada y documentación organizada según su propósito.
 
 **Evidencias**
-
+(Revisar en Evidencias)
 - **Imagen 12.** Regla de entrada del firewall para el puerto TCP 5050.
 - **Imagen 13.** Cliente remoto conectado al servidor y realizando consultas.
 - **Imagen 14.** Servidor registrando la conexión desde la IP de la segunda computadora y consulta
